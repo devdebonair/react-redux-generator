@@ -1,0 +1,11 @@
+{
+  "name": "react-redux-generator",
+  "version": "1.0.0",
+  "description": "Programatically create components, actions, reducers for react redux.",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "change-case": "^3.0.2"
+  }
+}
