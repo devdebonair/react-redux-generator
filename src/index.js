@@ -83,5 +83,21 @@ const compOptions = {
     }
 }
 
-const toPrint = comp(compOptions)
+const cont = require("./templates/container.template")
+const contOptions = {
+    "name": "reddit search",
+    "component": "subreddit page",
+    "mapStateToProps": {
+        "parameters": [
+            { "name": "subreddit", "type": "String", "defaultValue": null },
+            { "name": "posts", "type": "Object", "defaultValue": null },
+            { "name": "isLoading", "type": "Boolean", "defaultValue": null }
+        ],
+        "code": "return{subreddit,posts,isLoading}"
+    },
+    "mapDispatchToProps": {
+        "code": "return{onSearch:(subreddit)=>{dispatch(Actions.requestPosts(subreddit))}};"
+    }
+}
+const toPrint = cont(contOptions)
 console.log(toPrint)

@@ -184,15 +184,15 @@
     ],
     "containers": [
         {
-            "name": "RedditSearch",
-            "component": "SubredditPage",
+            "name": "reddit search",
+            "component": "subreddit page",
             "mapStateToProps": {
                 "parameters": [
                     { "name": "subreddit", "type": "String", "defaultValue": null },
                     { "name": "posts", "type": "Object", "defaultValue": null },
                     { "name": "isLoading", "type": "Boolean", "defaultValue": null }
                 ],
-                "returnState": true
+                "code": "return{subreddit,posts,isLoading}"
             },
             "mapDispatchToProps": {
                 "code": "return{onSearch:(subreddit)=>{dispatch(Actions.requestPosts(subreddit))}};"
