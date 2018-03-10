@@ -10,7 +10,7 @@ module.exports = ({ name, defaultState, actions, imports }) => {
     if(!item.async) {
       return `
         case Actions.${item.type}:
-          ${item.return}
+          ${item.code}
       `
     }
 
@@ -20,7 +20,7 @@ module.exports = ({ name, defaultState, actions, imports }) => {
     let failure = item.code.failure ? `prevState => { ${item.code.failure} }` : null
     return `
       case Actions.${item.type}:
-        return hanlde(state, action, {
+        return handle(state, action, {
           start: ${start},
           finish: ${finish},
           success: ${success},

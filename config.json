@@ -42,7 +42,7 @@
     "reducers": [
         {
             "name": "subreddit",
-            "defaultState": "",
+            "defaultState": "\"\"",
             "imports": [],
             "actions": [
                 {
@@ -54,7 +54,7 @@
         },
         {
             "name": "posts",
-            "defaultState": [],
+            "defaultState": "[]",
             "imports": [],
             "actions": [
                 {

@@ -35,5 +35,25 @@ const codeOptions = {
       }
   ]
 }
-const toPrint = code(codeOptions)
+
+const reducer = require("./templates/reducer.template")
+const reducerOptions = {
+    "name": "isLoading",
+    "defaultState": false,
+    "imports": [],
+    "actions": [
+        {
+            "type": "REQUEST_POSTS",
+            "async": true,
+            "code": {
+                "start": "return prevState=>true",
+                "finish": "return prevState=>false",
+                "success": null,
+                "failure": null
+            }
+        }
+    ]
+}
+
+const toPrint = reducer(reducerOptions)
 console.log(toPrint)
