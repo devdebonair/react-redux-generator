@@ -55,5 +55,33 @@ const reducerOptions = {
     ]
 }
 
-const toPrint = reducer(reducerOptions)
+const comp = require("./templates/component.template")
+const compOptions = {
+    "style": false,
+    "globals": [],
+    "imports": [
+        {
+            "location": "../post-list",
+            "exported": [],
+            "as": "PostList"
+        },
+        {
+            "location": "../search",
+            "exported": [],
+            "as": "Search"
+        }
+    ],
+    "react": {
+        "name": "SubredditPage",
+        "props": [
+            { "name": "subreddit", "type": "String", "defaultValue": null },
+            { "name": "posts", "type": "Object", "defaultValue": null },
+            { "name": "onSearch", "type": "Function", "defaultValue": null },
+            { "name": "isLoading", "type": "Boolean", "defaultValue": null }
+        ],
+        "code": "return (<div><SearchBar term={subreddit} onSearch={onSearch} isLoading={isLoading} /><PostList posts={posts} /></div>)"
+    }
+}
+
+const toPrint = comp(compOptions)
 console.log(toPrint)

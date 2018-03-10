@@ -125,7 +125,7 @@
                 }
             ],
             "react": {
-                "name": "PostList",
+                "name": "post list",
                 "props": [
                     { "name": "posts", "type": "Object", "defaultValue": null }
                 ],
@@ -146,7 +146,7 @@
                 }
             ],
             "react": {
-                "name": "Search",
+                "name": "search",
                 "props": [
                     { "name": "term", "type": "String", "defaultValue": "" },
                     { "name": "onSearch", "type": "Function", "defaultValue": null },
