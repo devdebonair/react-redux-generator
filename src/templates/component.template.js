@@ -16,12 +16,12 @@ module.exports = ({ style, imports, react }) => {
   })
   const isPropsEmpty = props.length === 0
   return `
-    ${parsedImports.join("\n")}
+    ${parsedImports.join(";\n")}
 
     const ${caser.pascal(react.name)} = (${isPropsEmpty ? "" : `{ ${props.join(", ")} }`}) => {
       ${react.code}
     }
 
-    export default ${caser.pascal(react.name)}
+    export default ${caser.pascal(react.name)};
   `
 }

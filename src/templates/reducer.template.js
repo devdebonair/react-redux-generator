@@ -29,16 +29,16 @@ module.exports = ({ name, defaultState, actions, imports }) => {
     `
   })
   return `
-    import * as Actions from '../actions/index'
-    import { handle } from 'redux-pack'
-    ${parsedImports.join("\n")}
+    import * as Actions from '../actions/index';
+    import { handle } from 'redux-pack';
+    ${parsedImports.join(";\n")}
 
     export const ${name} = (state = ${defaultState}, action) => {
-      const { type, payload } = action
+      const { type, payload } = action;
       switch(type) {
         ${parsedActions.join("\n")}
         default:
-          return state
+          return state;
       }
     }
   `

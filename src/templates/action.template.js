@@ -14,7 +14,7 @@ module.exports = ({ name, parameters, async, type, payload, imports, promise }) 
   return `
     ${parsedImports.join("\n")}
 
-    export const ${caser.constant(name)} = "${caser.constant(name)}"
+    export const ${caser.constant(name)} = "${caser.constant(name)}";
     export const ${caser.camel(name)} = (${param(parameters[0])}) => {
       return {
         type: ${caser.constant(name)},

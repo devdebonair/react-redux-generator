@@ -17,12 +17,12 @@ module.exports = ({ path, style, imports, react }) => {
   props.unshift("match")
 
   return `
-    ${parsedImports.join("\n")}
+    ${parsedImports.join(";\n")}
 
     const ${caser.pascal(react.name)} = ({ ${props.join(", ")} }) => {
       ${react.code}
     }
 
-    export default ${caser.pascal(react.name)}
+    export default ${caser.pascal(react.name)};
   `
 }

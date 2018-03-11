@@ -10,9 +10,9 @@ module.exports = ({ name, component, mapStateToProps, mapDispatchToProps }) => {
     return item.name
   })
   return `
-  import { connect } from 'react-redux'
-  import * as Actions from '../../actions'
-  import ${caser.pascal(component)} from '../../components/${caser.param(component)}'
+  import { connect } from 'react-redux';
+  import * as Actions from '../../actions';
+  import ${caser.pascal(component)} from '../../components/${caser.param(component)}';
 
   const mapStateToProps = ({ ${stateParams.join(", ")} }) => {
     ${mapStateToProps.code ? mapStateToProps.code : `return { ${stateParamNames.join(",")} }`}
@@ -22,8 +22,8 @@ module.exports = ({ name, component, mapStateToProps, mapDispatchToProps }) => {
     ${mapDispatchToProps.code}
   }
 
-  const ${caser.pascal(name)} = connect(mapStateToProps, mapDispatchToProps)(${caser.pascal(component)})
+  const ${caser.pascal(name)} = connect(mapStateToProps, mapDispatchToProps)(${caser.pascal(component)});
 
-  export default ${caser.pascal(name)}
+  export default ${caser.pascal(name)};
   `
 }
