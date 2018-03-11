@@ -2,7 +2,7 @@
     "scripts": [
         {
             "name": "reddit",
-            "code": "const r=new snoowrap({userAgent:\"nodev7.2.1:jiNIOlneh6TvXQ:1.0 (by /u/catalystlive)\",clientId:\"MeEU261ljtCJMg\",clientSecret:\"YQZda7J9vym-9pvT5DlpLPmxd1Y\",username:\"catalystlive\",password:\"kiddollars\"});",
+            "code": "const r=new snoowrap();",
             "imports": [
                 {
                     "location": "snoowrap",
