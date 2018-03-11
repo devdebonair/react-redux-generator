@@ -1,4 +1,4 @@
-const action = require("./templates/action.template")
+const action = require("../src/templates/action.template")
 const options = {
   "name": "select subreddit",
   "parameters": [
@@ -23,7 +23,7 @@ const optionsTwo = {
       }
   ]
 }
-const code = require("./templates/script.template")
+const code = require("../src/templates/script.template")
 const codeOptions = {
   "name": "reddit",
   "code": "const r=new snoowrap();",
@@ -36,7 +36,7 @@ const codeOptions = {
   ]
 }
 
-const reducer = require("./templates/reducer.template")
+const reducer = require("../src/templates/reducer.template")
 const reducerOptions = {
     "name": "isLoading",
     "defaultState": false,
@@ -55,7 +55,7 @@ const reducerOptions = {
     ]
 }
 
-const comp = require("./templates/component.template")
+const comp = require("../src/templates/component.template")
 const compOptions = {
     "style": false,
     "globals": [],
@@ -83,7 +83,7 @@ const compOptions = {
     }
 }
 
-const cont = require("./templates/container.template")
+const cont = require("../src/templates/container.template")
 const contOptions = {
     "name": "reddit search",
     "component": "subreddit page",
@@ -100,7 +100,7 @@ const contOptions = {
     }
 }
 
-const page = require("./templates/page.template")
+const page = require("../src/templates/page.template")
 const pageOptions = {
     "style": true,
     "imports": [
