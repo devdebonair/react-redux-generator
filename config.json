@@ -201,6 +201,8 @@
     ],
     "pages": [
         {
+            "path": "/",
+            "style": false,
             "imports": [
                 {
                     "location": "semantic-ui-react",

@@ -99,5 +99,34 @@ const contOptions = {
         "code": "return{onSearch:(subreddit)=>{dispatch(Actions.requestPosts(subreddit))}};"
     }
 }
-const toPrint = cont(contOptions)
+
+const page = require("./templates/page.template")
+const pageOptions = {
+    "style": true,
+    "imports": [
+        {
+            "location": "react-router-dom",
+            "exported": [
+                { "object": "Link", "as": null }
+            ],
+            "as": null
+        },
+        {
+            "location": "./Layout",
+            "exported": [],
+            "as": "Layout"
+        },
+        {
+            "location": "../containers/subreddit-page",
+            "exported": [],
+            "as": "RedditSearch"
+        }
+    ],
+    "react": {
+        "name": "Home",
+        "props": [],
+        "code": "return (<Layout><RedditSearch /><p>Hello World of React and Webpack! Hot Reloaded :)</p><p><Link to=\"/dynamic\">Navigate to Dynamic Page</Link></p></Layout>)"
+    }
+}
+const toPrint = page(pageOptions)
 console.log(toPrint)
