@@ -28,7 +28,7 @@
                     { "name": "subreddit", "type": "String", "defaultValue": null }
                 ],
                 "async": true,
-                "promise": "r.getSubreddit(subreddit).getHot();",
+                "promise": "r.getSubreddit(subreddit).getHot()",
                 "imports": [
                     {
                         "location": "../scripts/reddit",
